@@ -153,7 +153,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  placeholder="John Doe..."
+                  placeholder="Saleha Tamjeed..."
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -172,7 +172,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  placeholder="john@gmail.com"
+                  placeholder="stamjeed@asu.edu"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
