@@ -21,12 +21,14 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Software Engineer who enjoys building full-stack web apps from
-            scratch. My toolkit includes React, TypeScript, Node.js, and
-            Express, plus a healthy dose of debugging. Currently a Software
-            Engineering student at ASU, shipping features that real users
-            actually use. When I'm not coding, you'll probably find me
-            playing chess.
+            I'm a Software Engineering student at ASU passionate about
+            building thoughtful, full-stack applications that solve real
+            problems. I enjoy exploring new technologies, breaking down
+            complex challenges, and finding the details that make systems
+            reliable and intuitive. I'm always learning, experimenting, and
+            looking for ways to turn ideas into something meaningful. Beyond
+            technology, I have a deep curiosity for physics and astronomy and
+            the questions they raise about our universe.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
