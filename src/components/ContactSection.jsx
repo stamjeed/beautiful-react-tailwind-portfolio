@@ -131,15 +131,22 @@ export const ContactSection = () => {
 
               <div className="flex space-x-4 justify-center">
 
-                <div className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer">
+                {/* TODO: add your LinkedIn profile URL */}
+                <div className="p-3 rounded-full bg-primary/10">
                   <Linkedin className="h-5 w-5" />
                 </div>
 
-                <div className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer">
+                <a
+                  href="https://github.com/stamjeed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
                   <Github className="h-5 w-5" />
-                </div>
+                </a>
 
-                <div className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer">
+                {/* TODO: add your Instagram profile URL */}
+                <div className="p-3 rounded-full bg-primary/10">
                   <Instagram className="h-5 w-5" />
                 </div>
 
