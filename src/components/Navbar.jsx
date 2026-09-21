@@ -23,13 +23,23 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
+    <nav className="fixed top-0 w-full z-40">
+      {/*
+        Background layer lives on its own element instead of on <nav> itself.
+        backdrop-filter on an ancestor makes it the containing block for any
+        `position: fixed` descendant (like the mobile menu below), which was
+        collapsing the mobile menu down to the navbar's own height once you
+        scrolled. Keeping it as a non-ancestor sibling avoids that entirely.
+      */}
+      <div
+        aria-hidden="true"
+        className={cn(
+          "absolute inset-0 -z-10 transition-all duration-300",
+          isScrolled ? "bg-background/80 backdrop-blur-md shadow-xs" : ""
+        )}
+      />
+
+      <div className="container flex items-center justify-between py-4">
         <a
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
