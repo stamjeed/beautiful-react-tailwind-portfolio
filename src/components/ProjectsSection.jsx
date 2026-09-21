@@ -3,30 +3,61 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Fourier Transform Art Generator",
-    description: "Draw and visualize your sketches using Fourier epicycles in real time.",
+    title: "Messaging & Social App",
+    description:
+      "Cross-platform social messaging app with user authentication, messaging workflows, and responsive UI components.",
     image: "/projects/project1.png",
-    tags: ["React", "TypeScript", "Canvas API"],
-    demoUrl: "https://fourier-art-portfolio.vercel.app",
+    tags: ["React", "SwiftUI", "JavaScript", "Tailwind CSS"],
+    demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Kawaii Chat App",
+    title: "SunDevil",
     description:
-      "Real-time chat app with authentication, messaging, and modern UI interactions.",
+      "Book marketplace for ASU students, built with a team of four—listing, searching, and managing textbook transactions.",
     image: "/projects/project2.png",
-    tags: ["React Native", "Firebase", "Authentication"],
+    tags: ["React", "Team Project"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "Beautiful React Portfolio",
+    title: "GraphManager",
     description:
-      "Modern personal portfolio built with React and Tailwind featuring smooth UI and responsive design.",
+      "Java graph traversal algorithms (BFS/DFS) with automated testing and GitHub Actions CI/CD.",
     image: "/projects/project3.png",
-    tags: ["React", "TailwindCSS", "Responsive Design"],
+    tags: ["Java", "GitHub Actions", "Testing"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 4,
+    title: "ThriftyBite",
+    description:
+      "Web app that recommends recipes and nearby grocery deals based on the ingredients already in your pantry.",
+    image: "/projects/project1.png",
+    tags: ["React", "JavaScript"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 5,
+    title: "Fourier Series Visualizer",
+    description:
+      "Visualization app for modeling and graphing periodic functions using Fourier Series and dynamic data visualization.",
+    image: "/projects/project2.png",
+    tags: ["JavaScript", "Data Visualization"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 6,
+    title: "Educational Challenge Game",
+    description:
+      "JavaScript-based game featuring word, math, and shape challenges with interactive gameplay and scoring.",
+    image: "/projects/project3.png",
+    tags: ["JavaScript", "Game Dev"],
     demoUrl: "#",
     githubUrl: "#",
   },

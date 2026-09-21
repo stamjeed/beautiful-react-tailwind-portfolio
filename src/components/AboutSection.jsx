@@ -11,32 +11,29 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Software Engineering Student & Builder
+              Software Engineer & Full-Stack Builder
             </h3>
 
             <p className="text-muted-foreground">
-              I’m a Software Engineering student at Arizona State University with
-              hands-on experience building and testing real software in team
-              environments.
+              I'm a Software Engineering student at Arizona State University,
+              experienced in building full-stack web applications and
+              responsive user interfaces with React, TypeScript, JavaScript,
+              Node.js, Express, SQL, and PostgreSQL.
             </p>
 
             <p className="text-muted-foreground">
-              Currently, I work as a Salesforce IT Developer Intern at AGCO,
-              where I develop Lightning Web Components and write Apex unit tests.
-              I also care a lot about accessibility—during my volunteer work at
-              RIT, I evaluated thousands of websites using WCAG guidelines.
+              Right now I'm building a full-stack tutoring platform as my
+              Capstone project with Blue Marble at ASU. Before that, I spent
+              over a year as a Salesforce IT Developer Intern at AGCO,
+              shipping Lightning Web Components and pushing Apex unit test
+              coverage past 75%. I also care a lot about accessibility—during
+              my volunteer work at RIT, I evaluated thousands of websites
+              using WCAG guidelines.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
-              </a>
-
-              <a
-                href="" // add your resume file link here
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                Download CV
               </a>
             </div>
           </div>
@@ -50,8 +47,9 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Software Development</h4>
                   <p className="text-muted-foreground">
-                    Building projects with Java, JavaScript, HTML/CSS, and Apex—
-                    from features to testing and debugging.
+                    Building full-stack apps with React, TypeScript, Node.js,
+                    and Express—from REST APIs to responsive UI, testing, and
+                    debugging.
                   </p>
                 </div>
               </div>
@@ -80,8 +78,9 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Team Projects</h4>
                   <p className="text-muted-foreground">
-                    Worked on projects like ThriftyBite and the SunDevil Book
-                    Buying & Selling System—collaboration, planning, and delivery.
+                    Worked on projects like ThriftyBite, SunDevil, and a
+                    full-stack tutoring platform for Blue Marble—
+                    collaboration, planning, and delivery.
                   </p>
                 </div>
               </div>

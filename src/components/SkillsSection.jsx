@@ -2,40 +2,58 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
+  // Languages
+  { name: "Python", level: 80, category: "languages" },
+  { name: "Java", level: 85, category: "languages" },
+  { name: "JavaScript", level: 90, category: "languages" },
+  { name: "TypeScript", level: 85, category: "languages" },
+  { name: "Apex", level: 75, category: "languages" },
+  { name: "SQL", level: 80, category: "languages" },
+
   // Frontend
-  { name: "HTML/CSS", level: 90, category: "frontend" },
-  { name: "JavaScript", level: 85, category: "frontend" },
-  { name: "TypeScript", level: 80, category: "frontend" },
-  { name: "React", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 85, category: "frontend" },
-  { name: "Vite", level: 80, category: "frontend" },
+  { name: "React", level: 90, category: "frontend" },
+  { name: "SwiftUI", level: 70, category: "frontend" },
+  { name: "Tailwind CSS", level: 90, category: "frontend" },
+  { name: "HTML", level: 90, category: "frontend" },
+  { name: "CSS", level: 90, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express.js", level: 80, category: "backend" },
-  { name: "Python", level: 75, category: "backend" },
-  { name: "Flask", level: 70, category: "backend" },
-  { name: "MySQL", level: 75, category: "backend" },
-  { name: "Supabase", level: 75, category: "backend" },
+  { name: "Node.js", level: 85, category: "backend" },
+  { name: "Express", level: 85, category: "backend" },
+  { name: "REST APIs", level: 85, category: "backend" },
 
-  // Programming
-  { name: "Java", level: 85, category: "programming" },
-  { name: "C++", level: 75, category: "programming" },
-  { name: "C#", level: 75, category: "programming" },
-  { name: "C", level: 70, category: "programming" },
-  { name: "Apex", level: 70, category: "programming" },
+  // Databases
+  { name: "Supabase", level: 80, category: "databases" },
+  { name: "PostgreSQL", level: 80, category: "databases" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
+  { name: "Git", level: 90, category: "tools" },
+  { name: "GitHub", level: 90, category: "tools" },
+  { name: "Salesforce CLI", level: 75, category: "tools" },
   { name: "GitHub Actions", level: 75, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-  { name: "IntelliJ IDEA", level: 80, category: "tools" },
-  { name: "Figma", level: 80, category: "tools" },
-  { name: "Astah UML", level: 75, category: "tools" },
-  { name: "Salesforce", level: 75, category: "tools" },
+
+  // AI Tools
+  { name: "Claude Code", level: 85, category: "ai" },
+  { name: "GitHub Copilot", level: 80, category: "ai" },
+
+  // Testing
+  { name: "Unit Testing", level: 80, category: "testing" },
+  { name: "QA Testing", level: 75, category: "testing" },
+  { name: "Accessibility Testing", level: 85, category: "testing" },
+  { name: "Vitest", level: 75, category: "testing" },
+  { name: "Playwright", level: 70, category: "testing" },
 ];
 
-const categories = ["all", "frontend", "backend", "programming", "tools"];
+const categories = [
+  "all",
+  "languages",
+  "frontend",
+  "backend",
+  "databases",
+  "tools",
+  "ai",
+  "testing",
+];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
