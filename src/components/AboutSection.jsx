@@ -26,7 +26,7 @@ export const AboutSection = () => {
               Capstone project with Blue Marble at ASU. Before that, I spent
               over a year as a Salesforce IT Developer Intern at AGCO,
               shipping Lightning Web Components and pushing Apex unit test
-              coverage past 75%. I also care a lot about accessibility—during
+              coverage past 75%. I also care a lot about accessibility. During
               my volunteer work at RIT, I evaluated thousands of websites
               using WCAG guidelines.
             </p>
@@ -48,8 +48,8 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Software Development</h4>
                   <p className="text-muted-foreground">
                     Building full-stack apps with React, TypeScript, Node.js,
-                    and Express—from REST APIs to responsive UI, testing, and
-                    debugging.
+                    and Express, covering everything from REST APIs to
+                    responsive UI, testing, and debugging.
                   </p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Team Projects</h4>
                   <p className="text-muted-foreground">
                     Worked on projects like ThriftyBite, SunDevil, and a
-                    full-stack tutoring platform for Blue Marble—
+                    full-stack tutoring platform for Blue Marble, focusing on
                     collaboration, planning, and delivery.
                   </p>
                 </div>

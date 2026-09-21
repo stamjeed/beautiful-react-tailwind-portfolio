@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     title: "SunDevil",
     description:
-      "Book marketplace for ASU students, built with a team of four—listing, searching, and managing textbook transactions.",
+      "Book marketplace for ASU students, built with a team of four to handle listing, searching, and managing textbook transactions.",
     image: "/projects/project2.png",
     tags: ["React", "Team Project"],
     demoUrl: "#",

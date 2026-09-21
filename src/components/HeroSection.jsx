@@ -21,12 +21,11 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Software Engineer who turns coffee, curiosity, and way too many
-            open tabs into full-stack web apps. I build with React,
-            TypeScript, Node.js, and Express, make databases behave, and
-            occasionally let Claude Code pair-program with me. Currently
-            chasing a CS degree at ASU and shipping real features for real
-            users.
+            Software Engineer who enjoys building full-stack web apps from
+            scratch. My toolkit includes React, TypeScript, Node.js, and
+            Express, plus a healthy dose of debugging and coffee. Currently a
+            Software Engineering student at ASU, shipping features that real
+            users actually use.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
