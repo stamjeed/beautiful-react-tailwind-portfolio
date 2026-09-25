@@ -36,9 +36,9 @@ const projects = [
     title: "ThriftyBite",
     description:
       "Web app that recommends recipes and nearby grocery deals based on the ingredients already in your pantry.",
-    image: "/projects/project1.png",
+    image: "/projects/thriftybite.png",
     tags: ["React", "JavaScript"],
-    demoUrl: "#",
+    demoUrl: "https://thriftybite.vercel.app",
     githubUrl: "#",
   },
   {
