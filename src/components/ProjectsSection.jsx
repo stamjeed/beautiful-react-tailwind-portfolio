@@ -46,9 +46,9 @@ const projects = [
     title: "Fourier Series Visualizer",
     description:
       "Visualization app for modeling and graphing periodic functions using Fourier Series and dynamic data visualization.",
-    image: "/projects/project2.png",
+    image: "/projects/fourier-series-visualizer.png",
     tags: ["JavaScript", "Data Visualization"],
-    demoUrl: "#",
+    demoUrl: "https://fourier-art-generator.vercel.app",
     githubUrl: "#",
   },
   {
