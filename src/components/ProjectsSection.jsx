@@ -1,36 +1,37 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
-  {
-    id: 1,
-    title: "Messaging & Social App",
-    description:
-      "Cross-platform social messaging app with user authentication, messaging workflows, and responsive UI components.",
-    image: "/projects/project1.png",
-    tags: ["React", "SwiftUI", "JavaScript", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 2,
-    title: "SunDevil",
-    description:
-      "Book marketplace for ASU students, built with a team of four to handle listing, searching, and managing textbook transactions.",
-    image: "/projects/project2.png",
-    tags: ["React", "Team Project"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 3,
-    title: "GraphManager",
-    description:
-      "Java graph traversal algorithms (BFS/DFS) with automated testing and GitHub Actions CI/CD.",
-    image: "/projects/project3.png",
-    tags: ["Java", "GitHub Actions", "Testing"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
+  // Incomplete for now: uncomment once real links and screenshots are ready.
+  // {
+  //   id: 1,
+  //   title: "Messaging & Social App",
+  //   description:
+  //     "Cross-platform social messaging app with user authentication, messaging workflows, and responsive UI components.",
+  //   image: "/projects/project1.png",
+  //   tags: ["React", "SwiftUI", "JavaScript", "Tailwind CSS"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  // },
+  // {
+  //   id: 2,
+  //   title: "SunDevil",
+  //   description:
+  //     "Book marketplace for ASU students, built with a team of four to handle listing, searching, and managing textbook transactions.",
+  //   image: "/projects/project2.png",
+  //   tags: ["React", "Team Project"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  // },
+  // {
+  //   id: 3,
+  //   title: "GraphManager",
+  //   description:
+  //     "Java graph traversal algorithms (BFS/DFS) with automated testing and GitHub Actions CI/CD.",
+  //   image: "/projects/project3.png",
+  //   tags: ["Java", "GitHub Actions", "Testing"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  // },
   {
     id: 4,
     title: "ThriftyBite",
