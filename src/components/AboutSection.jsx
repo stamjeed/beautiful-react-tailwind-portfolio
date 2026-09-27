@@ -1,4 +1,25 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Accessibility, Cloud, Code } from "lucide-react";
+
+const highlights = [
+  {
+    icon: Code,
+    title: "Full-Stack Builder",
+    description:
+      "From databases and APIs to polished interfaces, I like owning a feature end to end.",
+  },
+  {
+    icon: Cloud,
+    title: "Real-World Experience",
+    description:
+      "Enterprise Salesforce work and a production web app taught me to ship reliable code.",
+  },
+  {
+    icon: Accessibility,
+    title: "Inclusive by Default",
+    description:
+      "I care about accessible, intuitive design and have checked thousands of sites for WCAG.",
+  },
+];
 
 export const AboutSection = () => {
   return (
@@ -9,29 +30,37 @@ export const AboutSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 text-left">
             <h3 className="text-2xl font-semibold">
-              Software Engineer & Full-Stack Builder
+              Curious Mind, Careful Builder
             </h3>
 
             <p className="text-muted-foreground">
-              I'm a Software Engineering student at Arizona State University,
-              experienced in building full-stack web applications and
-              responsive user interfaces with React, TypeScript, JavaScript,
-              Node.js, Express, SQL, and PostgreSQL.
+              I love turning ideas into reliable, well-designed software, from
+              the first sketch to the final deploy.
             </p>
 
             <p className="text-muted-foreground">
-              Right now I'm building a full-stack tutoring platform as my
-              Capstone project with Blue Marble at ASU. Before that, I spent
-              over a year as a Salesforce IT Developer Intern at AGCO,
-              shipping Lightning Web Components and pushing Apex unit test
-              coverage past 75%. I also care a lot about accessibility. During
-              my volunteer work at RIT, I evaluated thousands of websites
-              using WCAG guidelines.
+              On the web, I work across the whole stack: React and TypeScript
+              for the interface, Node and Express for the APIs, and SQL
+              databases like PostgreSQL behind them, including sign-in and
+              payment flows.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <p className="text-muted-foreground">
+              Beyond the web, I&apos;ve built Salesforce components with Apex,
+              trained a machine learning model, and written Java algorithms
+              with automated tests and CI. I test what I build, and I care
+              about how real people, including those using screen readers,
+              experience it.
+            </p>
+
+            <p className="text-muted-foreground">
+              Most of all, I&apos;m happiest when I&apos;m learning something
+              new.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
               </a>
@@ -39,52 +68,19 @@ export const AboutSection = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Software Development</h4>
-                  <p className="text-muted-foreground">
-                    Building full-stack apps with React, TypeScript, Node.js,
-                    and Express, covering everything from REST APIs to
-                    responsive UI, testing, and debugging.
-                  </p>
+            {highlights.map((item) => (
+              <div key={item.title} className="gradient-border p-6 card-hover">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-semibold text-lg">{item.title}</h4>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Accessibility Focus</h4>
-                  <p className="text-muted-foreground">
-                    Evaluated 4,000+ websites for WCAG issues and improved UX
-                    thinking with inclusive design in mind.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Team Projects</h4>
-                  <p className="text-muted-foreground">
-                    Worked on projects like ThriftyBite, SunDevil, and a
-                    full-stack tutoring platform for Blue Marble, focusing on
-                    collaboration, planning, and delivery.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

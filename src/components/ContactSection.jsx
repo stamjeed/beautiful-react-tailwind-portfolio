@@ -65,10 +65,8 @@ export const ContactSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          I'm a Software Engineering student at Arizona State University
-          passionate about building creative web applications, UI/UX
-          experiences, and interactive software projects. Feel free to reach
-          out for collaborations or opportunities.
+          Have a project in mind, an opportunity to share, or just want to say
+          hi? My inbox is always open, so feel free to reach out.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

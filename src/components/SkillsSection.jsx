@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
@@ -55,11 +55,37 @@ const categories = [
   "testing",
 ];
 
+const categoryLabels = { ai: "AI" };
+
+const MOBILE_QUERY = "(max-width: 767px)";
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia(MOBILE_QUERY).matches
+  );
+
+  useEffect(() => {
+    const query = window.matchMedia(MOBILE_QUERY);
+    const onChange = (event) => setIsMobile(event.matches);
+    query.addEventListener("change", onChange);
+    return () => query.removeEventListener("change", onChange);
+  }, []);
+
+  return isMobile;
+};
+
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const isMobile = useIsMobile();
+
+  const visibleCategories = isMobile
+    ? categories.filter((category) => category !== "all")
+    : categories;
+  const currentCategory =
+    isMobile && activeCategory === "all" ? visibleCategories[0] : activeCategory;
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => currentCategory === "all" || skill.category === currentCategory
   );
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -69,18 +95,18 @@ export const SkillsSection = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, key) => (
+          {visibleCategories.map((category, key) => (
             <button
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
+                currentCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
               )}
             >
-              {category}
+              {categoryLabels[category] ?? category}
             </button>
           ))}
         </div>

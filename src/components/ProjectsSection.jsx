@@ -36,31 +36,31 @@ const projects = [
     id: 4,
     title: "ThriftyBite",
     description:
-      "Web app that recommends recipes and nearby grocery deals based on the ingredients already in your pantry.",
+      "Full-stack app that matches recipes to the ingredients in your pantry and surfaces nearby grocery deals on whatever is missing.",
     image: "/projects/thriftybite.png",
-    tags: ["React", "JavaScript"],
+    tags: ["Next.js", "TypeScript", "Prisma", "SQLite"],
     demoUrl: "https://thriftybite.vercel.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/stamjeed",
   },
   {
     id: 5,
     title: "Fourier Series Visualizer",
     description:
-      "Visualization app for modeling and graphing periodic functions using Fourier Series and dynamic data visualization.",
+      "Draw any shape and watch it rebuilt from spinning circles, using Fourier Series to model and graph periodic functions.",
     image: "/projects/fourier-series-visualizer.png",
-    tags: ["JavaScript", "Data Visualization"],
+    tags: ["JavaScript", "Fourier Series", "Data Visualization"],
     demoUrl: "https://fourier-art-generator.vercel.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/stamjeed",
   },
   {
     id: 6,
-    title: "Educational Challenge Game",
+    title: "Personal Portfolio",
     description:
-      "JavaScript-based game featuring word, math, and shape challenges with interactive gameplay and scoring.",
-    image: "/projects/project3.png",
-    tags: ["JavaScript", "Game Dev"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "This site: a responsive, space-themed portfolio with a light and dark mode, animated visuals, and a contact form that sends real email.",
+    image: "/projects/portfolio.png",
+    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    demoUrl: "https://stamjeed.vercel.app",
+    githubUrl: "https://github.com/stamjeed",
   },
 ];
 
@@ -95,7 +95,10 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}

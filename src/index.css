@@ -127,6 +127,18 @@
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
 
+@utility text-gradient {
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--primary)),
+    hsl(190 90% 65%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
