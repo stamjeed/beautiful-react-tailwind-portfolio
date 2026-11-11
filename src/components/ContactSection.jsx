@@ -129,10 +129,15 @@ export const ContactSection = () => {
 
               <div className="flex space-x-4 justify-center">
 
-                {/* TODO: add your LinkedIn profile URL */}
-                <div aria-hidden="true" className="p-3 rounded-full bg-primary/10">
-                  <Linkedin className="h-5 w-5" />
-                </div>
+                <a
+                  href="https://www.linkedin.com/in/saleha-tamjeed-9b4b63184/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile (opens in a new tab)"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" aria-hidden="true" />
+                </a>
 
                 <a
                   href="https://github.com/stamjeed"
