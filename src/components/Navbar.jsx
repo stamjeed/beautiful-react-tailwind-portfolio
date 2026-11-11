@@ -23,8 +23,22 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close the mobile menu with Escape and lock page scroll while it is open.
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
   return (
-    <nav className="fixed top-0 w-full z-40">
+    <nav aria-label="Main" className="fixed top-0 w-full z-40">
       {/*
         Background layer lives on its own element instead of on <nav> itself.
         backdrop-filter on an ancestor makes it the containing block for any
@@ -76,29 +90,37 @@ export const Navbar = () => {
 
           {/* mobile nav */}
           <button
+            type="button"
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="md:hidden p-2 text-foreground z-50"
-            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+            {isMenuOpen ? (
+              <X size={24} aria-hidden="true" />
+            ) : (
+              <Menu size={24} aria-hidden="true" />
+            )}
           </button>
         </div>
 
         <div
+          id="mobile-menu"
           className={cn(
             "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "opacity-100 pointer-events-auto visible"
+              : "opacity-0 pointer-events-none invisible"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col space-y-4 text-xl">
             {navItems.map((item, key) => (
               <a
                 key={key}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                className="block py-2 text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

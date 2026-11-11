@@ -24,6 +24,16 @@
       content="Portfolio of Saleha Tamjeed, a Software Engineering student at ASU building full-stack web applications with React, TypeScript, Node.js, and Express."
     />
     <meta name="twitter:image" content="https://stamjeed.vercel.app/banner.png" />
+    <script>
+      // Apply the saved theme before first paint to avoid a light/dark flash.
+      try {
+        if (localStorage.getItem("theme") !== "light") {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

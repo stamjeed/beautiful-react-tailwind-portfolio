@@ -1,17 +1,7 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Clock, ExternalLink, Github } from "lucide-react";
 
 const projects = [
   // Incomplete for now: uncomment once real links and screenshots are ready.
-  // {
-  //   id: 1,
-  //   title: "Messaging & Social App",
-  //   description:
-  //     "Cross-platform social messaging app with user authentication, messaging workflows, and responsive UI components.",
-  //   image: "/projects/project1.png",
-  //   tags: ["React", "SwiftUI", "JavaScript", "Tailwind CSS"],
-  //   demoUrl: "#",
-  //   githubUrl: "#",
-  // },
   // {
   //   id: 2,
   //   title: "SunDevil",
@@ -32,6 +22,26 @@ const projects = [
   //   demoUrl: "#",
   //   githubUrl: "#",
   // },
+  {
+    id: 7,
+    title: "Blue Marble Academy (Capstone)",
+    description:
+      "Full-stack website and booking platform for a tutoring and coding academy. Families explore programs, book sessions and pay online, while staff manage bookings and students from their own dashboards.",
+    image: "/projects/blue-marble.webp",
+    tags: ["React", "TypeScript", "Express", "Supabase", "Stripe"],
+    demoUrl: "https://blue-marble-deploy-1.onrender.com/",
+  },
+  {
+    id: 1,
+    title: "KawaiiChat",
+    description:
+      "iOS messaging app with real-time chats, voice messages, photo sharing, read receipts and push notifications, wrapped in a playful, customizable kawaii theme.",
+    image: "/projects/kawaiichat-placeholder.svg",
+    imageAlt: "Illustration of the KawaiiChat messaging app (screenshots coming soon)",
+    tags: ["SwiftUI", "Swift", "Firebase", "Firestore"],
+    // TODO: add the live demo / App Store link once it is available
+    demoUrl: null,
+  },
   {
     id: 4,
     title: "ThriftyBite",
@@ -66,7 +76,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
@@ -78,21 +88,22 @@ export const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group flex flex-col w-full md:w-[calc(50%-1rem)] bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.imageAlt ?? `Screenshot of ${project.title}`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
@@ -108,23 +119,40 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
+                <div className="mt-auto pt-2 flex flex-wrap gap-3">
+                  {project.demoUrl ? (
                     <a
                       href={project.demoUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium transition-all duration-300 hover:shadow-[0_0_12px_hsl(var(--primary)/0.5)] hover:-translate-y-0.5"
                     >
-                      <ExternalLink size={20} />
+                      <ExternalLink size={16} aria-hidden="true" />
+                      Live Demo
+                      <span className="sr-only">
+                        of {project.title} (opens in a new tab)
+                      </span>
                     </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-dashed border-foreground/30 text-muted-foreground text-sm font-medium cursor-default">
+                      <Clock size={16} aria-hidden="true" />
+                      Demo Coming Soon
+                    </span>
+                  )}
+                  {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary text-primary text-sm font-medium transition-all duration-300 hover:bg-primary/10 hover:-translate-y-0.5"
                     >
-                      <Github size={20} />
+                      <Github size={16} aria-hidden="true" />
+                      Code
+                      <span className="sr-only">
+                        for {project.title} on GitHub (opens in a new tab)
+                      </span>
                     </a>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -135,9 +163,10 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/stamjeed"
           >
-            Check My Github <ArrowRight size={16} />
+            Check My GitHub <ArrowRight size={16} aria-hidden="true" />
           </a>
         </div>
       </div>

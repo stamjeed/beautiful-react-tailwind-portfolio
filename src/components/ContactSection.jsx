@@ -56,7 +56,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
+    <section id="contact" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
 
         {/* Heading */}
@@ -83,13 +83,13 @@ export const ContactSection = () => {
               {/* Email */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Mail aria-hidden="true" className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a
                     href="mailto:stamjeed@asu.edu"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="inline-block py-1 text-muted-foreground hover:text-primary transition-colors"
                   >
                     stamjeed@asu.edu
                   </a>
@@ -99,7 +99,7 @@ export const ContactSection = () => {
               {/* Phone */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Phone aria-hidden="true" className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
@@ -112,7 +112,7 @@ export const ContactSection = () => {
               {/* Location */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />
+                  <MapPin aria-hidden="true" className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
@@ -130,7 +130,7 @@ export const ContactSection = () => {
               <div className="flex space-x-4 justify-center">
 
                 {/* TODO: add your LinkedIn profile URL */}
-                <div className="p-3 rounded-full bg-primary/10">
+                <div aria-hidden="true" className="p-3 rounded-full bg-primary/10">
                   <Linkedin className="h-5 w-5" />
                 </div>
 
@@ -138,13 +138,14 @@ export const ContactSection = () => {
                   href="https://github.com/stamjeed"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub profile (opens in a new tab)"
                   className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                 >
-                  <Github className="h-5 w-5" />
+                  <Github className="h-5 w-5" aria-hidden="true" />
                 </a>
 
                 {/* TODO: add your Instagram profile URL */}
-                <div className="p-3 rounded-full bg-primary/10">
+                <div aria-hidden="true" className="p-3 rounded-full bg-primary/10">
                   <Instagram className="h-5 w-5" />
                 </div>
 
@@ -170,6 +171,7 @@ export const ContactSection = () => {
                   type="text"
                   id="name"
                   name="name"
+                  autoComplete="name"
                   required
                   placeholder="Saleha Tamjeed..."
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
@@ -185,6 +187,7 @@ export const ContactSection = () => {
                   type="email"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   required
                   placeholder="stamjeed@asu.edu"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
@@ -211,11 +214,11 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
-                <Send size={16} />
+                <Send size={16} aria-hidden="true" />
               </button>
             </form>
           </div>

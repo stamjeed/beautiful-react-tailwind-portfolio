@@ -88,7 +88,7 @@ export const SkillsSection = () => {
     (skill) => currentCategory === "all" || skill.category === currentCategory
   );
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+    <section id="skills" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary"> Skills</span>
@@ -98,12 +98,14 @@ export const SkillsSection = () => {
           {visibleCategories.map((category, key) => (
             <button
               key={key}
+              type="button"
               onClick={() => setActiveCategory(category)}
+              aria-pressed={currentCategory === category}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 currentCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
               {categoryLabels[category] ?? category}

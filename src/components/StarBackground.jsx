@@ -60,7 +60,10 @@ export const StarBackground = () => {
   };
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div
+      aria-hidden="true"
+      className="fixed inset-0 overflow-hidden pointer-events-none z-0"
+    >
       {stars.map((star) => (
         <div
           key={star.id}
@@ -85,7 +88,7 @@ export const StarBackground = () => {
             height: meteor.size * 0.3 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
-            animationDelay: meteor.delay,
+            animationDelay: meteor.delay + "s",
             animationDuration: meteor.animationDuration + "s",
           }}
         />
